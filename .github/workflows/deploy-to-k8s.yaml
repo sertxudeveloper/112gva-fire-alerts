@@ -69,4 +69,4 @@ jobs:
           port: ${{ secrets.KUBERNETES_MASTER_SSH_PORT }}
           key: ${{ secrets.KUBERNETES_MASTER_SSH_KEY }}
           script: |
-            microk8s kubectl set image deployment/${{ env.K8S_DEPLOYMENT }}-php-nginx -n ${{ env.K8S_NAMESPACE }} ${{ env.K8S_CONTAINER }}="${{ github.repository }}:sha-${{ github.sha }}"
+            microk8s kubectl set image deployment/${{ env.K8S_DEPLOYMENT }} -n ${{ env.K8S_NAMESPACE }} ${{ env.K8S_CONTAINER }}="${{ github.repository }}:sha-${{ github.sha }}"
