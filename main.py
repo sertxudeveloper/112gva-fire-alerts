@@ -59,7 +59,7 @@ def search_for_new_incidents():
                 cur.execute("""
                     INSERT INTO fire_incidents (sha256, bbox)
                     VALUES (%s, ST_MakeEnvelope(%s, %s, %s, %s, 4326), %s, %s, %s, %s)
-                """, (sha256, bbox[0], bbox[1], bbox[2], bbox[3]), incident[0], incident[1], incident[2], incident[3], incident[4]))
+                """, (sha256, bbox[0], bbox[1], bbox[2], bbox[3], incident[0], incident[1], incident[2], incident[3], incident[4]))
 
                 conn.commit()
 
