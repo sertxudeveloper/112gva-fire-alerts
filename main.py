@@ -68,7 +68,7 @@ def search_for_new_incidents():
         print("All incidents processed and sent to Telegram.")
 
 def main():
-    thread = threading.Timer(60.0, search_for_new_incidents) # 60 seconds = 1 minute
+    thread = threading.Timer(10 * 60.0, search_for_new_incidents) # X minutes * 60 seconds
     thread.start()
     search_for_new_incidents()
 
