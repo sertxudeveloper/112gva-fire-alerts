@@ -191,9 +191,9 @@ def send_incident_to_telegram(incident_info):
 
 *{description}*
 
-\- Ciudad: {city}
-\- Dirección: {address}
-\- Llamadas relacionadas: {calls}
+\\- Ciudad: {city}
+\\- Dirección: {address}
+\\- Llamadas relacionadas: {calls}
 """
 
     # Send the message to Telegram
